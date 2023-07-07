@@ -1,7 +1,6 @@
-package com.example.assignnumbertoclient;
+package com.example.assignnumbertoclient.exception;
 
 
-import com.example.assignnumbertoclient.client.ClientException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

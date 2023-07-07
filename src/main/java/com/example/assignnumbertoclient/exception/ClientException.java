@@ -1,11 +1,6 @@
-package com.example.assignnumbertoclient.client;
+package com.example.assignnumbertoclient.exception;
 
 public class ClientException extends RuntimeException{
-
-    public ClientException(){
-        super();
-    }
-
     public ClientException(String message){
         super(message);
     }

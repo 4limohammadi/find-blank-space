@@ -1,8 +1,6 @@
-package com.example.assignnumbertoclient;
+package com.example.assignnumbertoclient.client;
 
-import com.example.assignnumbertoclient.client.Client;
-import com.example.assignnumbertoclient.client.ClientException;
-import com.example.assignnumbertoclient.client.ClientService;
+import com.example.assignnumbertoclient.exception.ClientException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,7 +1,7 @@
 package com.example.assignnumbertoclient.blankSpace;
 
 import com.example.assignnumbertoclient.client.Client;
-import com.example.assignnumbertoclient.client.ClientException;
+import com.example.assignnumbertoclient.exception.ClientException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
