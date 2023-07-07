@@ -2,6 +2,7 @@ package com.example.assignnumbertoclient.client;
 
 import com.example.assignnumbertoclient.blankSpace.BlankSpaceContaianer;
 import com.example.assignnumbertoclient.blankSpace.BlankSpaceContainerService;
+import com.example.assignnumbertoclient.exception.ClientException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,14 +37,14 @@ public class ClientServiceImpl implements ClientService {
     @Override
     @Transactional
     public Optional<Client> insertNewClient(Client client) {
+
         if (clientDao.existsById(client.getClientNumber())) {
-
-            return Optional.empty();
+            throw new ClientException("duplicated record");
         }
-        blankSpaceContainerService.updateBlankSpaceForInsertVip(client);
-        clientDao.saveAndFlush(client);
 
-        return Optional.of(client);
+        blankSpaceContainerService.updateBlankSpaceForInsertVip(client);
+        
+        return Optional.of(clientDao.saveAndFlush(client));
     }
 
    @Transactional
